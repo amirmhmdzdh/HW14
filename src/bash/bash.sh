@@ -24,3 +24,17 @@ function show_tasks_deleted() {
   echo "---------------"
   cat "$database_file_deleted"
 }
+
+function add_task() {
+
+  echo "$1" >>"$database_file_undone"
+  echo "Task added: $1"
+
+}
+
+function remove_task() {
+
+  task_number=$1
+  sed -i "${task_number}d" "$database_file_undone"
+  echo "Task removed: $task_number"
+}
