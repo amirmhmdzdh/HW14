@@ -10,3 +10,17 @@ function show_tasks_undone() {
   echo "---------------"
   cat "$database_file_undone"
 }
+
+function show_tasks_done() {
+
+  echo "Tasks done:"
+  echo "--------------"
+  cat "$database_file_done"
+}
+
+function show_tasks_deleted() {
+
+  echo "Tasks deleted:"
+  echo "---------------"
+  cat "$database_file_deleted"
+}
